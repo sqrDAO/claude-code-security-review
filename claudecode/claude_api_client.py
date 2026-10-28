@@ -59,7 +59,7 @@ class ClaudeAPIClient:
         try:
             # Simple test call to verify API access
             self.client.messages.create(
-                model="claude-haiku-5-5",
+                model=self.model,
                 max_tokens=10,
                 messages=[{"role": "user", "content": "Hello"}],
                 timeout=10
